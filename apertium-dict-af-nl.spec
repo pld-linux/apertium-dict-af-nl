@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Para języków afrykanerski-holenderski dla Apertium
 %define	lpair	af-nl
 Name:		apertium-dict-%{lpair}
 Version:	0.2.0
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/Text
 Source0:	http://downloads.sourceforge.net/apertium/apertium-%{lpair}-%{version}.tar.gz
@@ -39,7 +39,7 @@ lub oznaczania części mowy w obu językach.
 %{__automake}
 %configure
 
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
